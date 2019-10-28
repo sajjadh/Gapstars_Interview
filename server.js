@@ -27,10 +27,28 @@ const db = new Database();
 function populate() {
     const data = [{
         id: '111111',
-        firstName: 'Priamo',
-        lastName: 'Ramirez',
+        firstName: 'Francis',
+        lastName: 'Berrocal',
+        vacancyTitle: 'Software Engineer',
+        matchingScore: 54,
+    }, {
+        id: '222222',
+        firstName: 'Olga',
+        lastName: 'Grytsenko',
         vacancyTitle: 'QA Engineer',
-        matchingScore: 5,
+        matchingScore: 67,
+    }, {
+        id: '333333',
+        firstName: 'Robert',
+        lastName: 'Szabo',
+        vacancyTitle: 'Product Owner',
+        matchingScore: 61,
+    }, {
+        id: '444444',
+        firstName: 'Sarah',
+        lastName: 'De Lange',
+        vacancyTitle: 'Release Worker',
+        matchingScore: 98,
     }];
     for(const datum of data) {
         db.set(datum.id, datum);
@@ -41,7 +59,7 @@ populate();
 // users -----------------------------------------------------------------------
 
 const users = new Map();
-user.set('tester', {
+users.set('tester', {
     password: 'iloveqa',
     role: 'user',
 });
