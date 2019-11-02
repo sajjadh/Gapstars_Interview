@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const bunyan = require('bunyan');
+const bunyan = require('bunyan-sfdx-no-dtrace');
 const { join: joinPaths } = require('path');
 const { OpenApiValidator } = require('express-openapi-validator');
 const passport = require('passport');
@@ -181,7 +181,7 @@ app.listen(port, () => {
     log.info(`Harver Candidate API now running on ${port}`);
 }).on('error', err => {
     if (err.code === 'EADDRINUSE') {
-        log.error(`Cannot start server. Something is already running on port ${port}`);
+        log.error(`Cannot start server. Something is already running on port http://localhost:${port}`);
         process.exit(1);
     } else {
         log.error({ err }, 'Cannot start server. :(');

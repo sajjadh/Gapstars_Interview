@@ -8,10 +8,10 @@
     "start": "node server.js | bunyan",
     "copy": "cp -r ./{api.yml,features,package.json,package-lock.json,README.md,.gitignore} build",
     "doc": "redoc-cli bundle api.yml --options.nativeScrollbars --output build/docs/api.html",
-    "minify" : "terser server.js --output build/server.js --mangle",
-    "clean" : "rm -r build && mkdir build",
-    "zip" : "zip -r harver-exercise-qa.zip build",
-    "build" : "npm run clean && npm run copy && npm run doc && npm run minify && npm run zip"
+    "minify": "terser server.js --output build/server.js --mangle",
+    "clean": "rm -r build && mkdir build",
+    "zip": "zip -r harver-exercise-qa.zip build",
+    "build": "npm run clean && npm run copy && npm run doc && npm run minify && npm run zip"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/philipmander/exercise-qa#readme",
   "dependencies": {
-    "bunyan": "^1.8.12",
+    "bunyan-sfdx-no-dtrace": "^1.8.2",
     "express": "^4.17.1",
     "express-openapi-validator": "^2.12.2",
     "passport": "^0.4.0",
