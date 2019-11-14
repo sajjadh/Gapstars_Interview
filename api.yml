@@ -63,6 +63,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Candidate'
+        '404'
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
     put:
       description: Update a candidate's data, this request may not include an ID. You must be authorized to use this path.
       operationId: updateCandidate
@@ -83,6 +89,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Candidate'
+        '404'
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
     patch:
       description: Apply changes to a candidate's data, this request may not include an ID. You must be authorized to use this path.
       security:
@@ -103,6 +115,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Candidate'
+        '404'
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
     delete:
       description: Deletes a single candidate based on the given ID. You must be authorized to use this path.
       security:
@@ -118,6 +136,12 @@ paths:
       responses:
         '204':
           description: Candidate deleted
+        '404'
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
         default:
           description: Unexpected error
           content:
