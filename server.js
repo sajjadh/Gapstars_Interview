@@ -16,8 +16,8 @@ const log = bunyan.createLogger({
 class Database extends Map {
     set(key, value) {
       if(typeof value === 'string') {
-          // BUG: truncate strings
-          value = value.substr(0, 30);
+          // BUG: Updated strings in data are truncated to 16 characters
+          value = value.substr(0, 16);
       }
       return super.set(key, value);
     }
@@ -48,6 +48,12 @@ function populate() {
         firstName: 'Sarah',
         lastName: 'De Lange',
         vacancyTitle: 'Release Worker',
+        matchingScore: 98,
+    },{
+        id: '555555',
+        firstName: 'Carlos',
+        lastName: 'Benitez',
+        vacancyTitle: 'MC',
         matchingScore: 98,
     }];
     for(const datum of data) {
@@ -100,7 +106,9 @@ passport.use(new BasicStrategy((username, password, done) => {
 
 // Get all
 app.get('/candidates', (req, res) => {
-    res.status(200).json(Array.from(db.values()));
+    // BUG: off by one error and the first candidate in the list is omitted.
+    // This might be hard, but by looking at the IDs the curious test might wonder why they start at '2'
+    res.status(200).json(Array.from(db.values()).shift());
 });
 
 // Get one
@@ -109,7 +117,8 @@ app.get('/candidates/:id', (req, res, next) => {
     const candidate = db.get(id);
 
     if(!candidate) {
-        return next(makeError(404, `Candidate with ID: "${id}" not found`));
+        // BUG: wrong status code. Should be 404
+        return next(makeError(504, `Candidate with ID: "${id}" not found`));
     }
     res.status(200).json(candidate);
 });
@@ -139,7 +148,7 @@ app.put('/candidates/:id', passport.authenticate('basic', { session: false }), (
         return next(makeError(404, `Candidate with ID: "${id}" not found`));
     }
     const update = req.body;
-    // BUG: Allows the client to update the ID of a resource
+    // BUG: This allows the client to update the ID of a resource. Which is bad.
     db.delete(id);
     db.set((update.id || id), update);
     res.status(200).json(update);
@@ -154,7 +163,7 @@ app.patch('/candidates/:id', passport.authenticate('basic', { session: false }),
         return next(makeError(404, `Candidate with ID: "${id}" not found`));
     }
     const update = Object.assign({}, candidate, req.body);
-    // BUG: Patch appears to work but doesn't actually update the resource
+    // BUG: Patch appears to work but doesn't actually update the resource. A future GET will prove this
     res.status(200).json(update);
 });
 
