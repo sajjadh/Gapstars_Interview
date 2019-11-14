@@ -9,7 +9,7 @@
     "copy": "cp -r ./{api.yml,features,package.json,package-lock.json,README.md,.gitignore} build",
     "doc": "redoc-cli bundle api.yml --options.nativeScrollbars --output build/docs/api.html",
     "minify": "terser server.js --output build/server.js --mangle",
-    "clean": "rm -r build && mkdir build",
+    "clean": "rm -rf build && mkdir build",
     "zip": "zip -r harver-exercise-qa.zip build",
     "build": "npm run clean && npm run copy && npm run doc && npm run minify && npm run zip"
   },

@@ -63,7 +63,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Candidate'
-        '404'
+        '404':
           description: Not found
           content:
             application/json:
@@ -89,7 +89,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Candidate'
-        '404'
+        '404':
           description: Not found
           content:
             application/json:
@@ -115,7 +115,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Candidate'
-        '404'
+        '404':
           description: Not found
           content:
             application/json:
@@ -136,7 +136,7 @@ paths:
       responses:
         '204':
           description: Candidate deleted
-        '404'
+        '404':
           description: Not found
           content:
             application/json:
