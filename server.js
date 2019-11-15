@@ -108,7 +108,8 @@ passport.use(new BasicStrategy((username, password, done) => {
 app.get('/candidates', (req, res) => {
     // BUG: off by one error and the first candidate in the list is omitted.
     // This might be hard, but by looking at the IDs the curious test might wonder why they start at '2'
-    res.status(200).json(Array.from(db.values()).shift());
+    const body = Array.from(db.values());
+    res.status(200).json(body.slice(1, body.length));
 });
 
 // Get one
