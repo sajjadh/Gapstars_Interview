@@ -36,6 +36,21 @@ at [`docs/api.html`](file:docs/api.html).
 
 Please return your completed solution by zipping up this directory and sharing with us the resulting zip file.
 
+### Web UI Automaion
+
+1. Go to https://the-internet.herokuapp.com/
+2. Select any five elements from the list
+3. Automate the selected elements using any JS based end to end testing framework.
+ *Tip!* 
+ Selenium (https://www.selenium.dev/documentation/)
+ TestCafe (https://testcafe.io/documentation/402634/guides)
+ Cypress (https://docs.cypress.io/)
+4. Create a project in github and provide us the link
+5. Make sure you have a readme with instructions inside the project.
+
+Expectation: All the tests should pass
+
+
 ## Notes
 
 * The database is mocked in memory. Restart the server to reset the data.
