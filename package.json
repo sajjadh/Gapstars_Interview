@@ -28,9 +28,9 @@
     "passport-http": "^0.3.0"
   },
   "devDependencies": {
+    "@cucumber/cucumber": "^7.3.1",
     "@harver/bat": "^1.1.1",
-    "cucumber": "^6.0.3",
-    "redoc-cli": "^0.9.2",
+    "redoc-cli": "^0.13.0",
     "terser": "^4.3.9"
   }
 }
