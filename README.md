@@ -6,7 +6,7 @@ This exercise assesses API testing skills.
 ## Background
 
 Harver's new Candidate API has been developed and is almost ready to be released!
-But does it live up to Harver's immpeccable quality standards? Your mission is to find out...
+But does it live up to Harver's impeccable quality standards? Your mission is to find out...
 
 ## Prequisites
 
@@ -29,14 +29,12 @@ at [`docs/api.html`](file:docs/api.html).
 
 ## Tasks
 
-1. Timebox yourself to 1 hour to find as many defects in the API as you can. Please share the defects you find in a document or spreadsheet.
-2. Automate your work! Write passing automated tests for positive scenarios. *Tip!*, we recommend
-[Behaviorial API Tester (Bat)](https://github.com/harver-engineering/bat) and you can run this with `npm test`
-3. Write automated tests that demonstrate the defects you have found in the system. That means that these tests should deliberately fail.
+### API test assignment
 
-Please return your completed solution by zipping up this directory and sharing with us the resulting zip file.
+1. Timebox yourself to 1 hour to find as many defects in the API as you can. 
+2. Please share the defects you find in a document or spreadsheet.
 
-### Web UI Automaion
+### Web UI Automation test assignment
 
 1. Go to https://the-internet.herokuapp.com/
 2. Select any five elements from the list
@@ -46,10 +44,9 @@ Please return your completed solution by zipping up this directory and sharing w
  TestCafe (https://testcafe.io/documentation/402634/guides)
  Cypress (https://docs.cypress.io/)
 4. Create a project in github and provide us the link
-5. Make sure you have a readme with instructions inside the project.
+5. Make sure you have a readme with instructions inside the project on how to run it
 
 Expectation: All the tests should pass
-
 
 ## Notes
 
