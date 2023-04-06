@@ -58,6 +58,5 @@ Bonus: run tests in different browsers.
 * The database is mocked in memory. Restart the server to reset the data.
 * Some of the API endpoints require [Basic Authentication](https://swagger.io/docs/specification/authentication/basic-authentication/).
   The username is: `tester` and the password is: `iloveqa`.
-* We've included the boilerplate code to write Bat feature files, for your convenience.
 * We would normally encourage static code analysis to help look for bugs, but for the purpose of this
   exercise, the `server.js` is deliberately obfuscated.
