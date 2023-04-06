@@ -25,6 +25,7 @@
     "passport-http": "0.3.0"
   },
   "devDependencies": {
+    "javascript-obfuscator": "^4.0.2",
     "redoc-cli": "0.13.0",
     "terser": "4.3.9"
   }
