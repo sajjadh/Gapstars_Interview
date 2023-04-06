@@ -1,7 +1,7 @@
 Harver QA Exercise
 ========================
 
-This exercise assesses API testing skills.
+This exercise assesses API testing and WEB test automation skills.
 
 ## Background
 
@@ -38,15 +38,20 @@ at [`docs/api.html`](file:docs/api.html).
 
 1. Go to https://the-internet.herokuapp.com/
 2. Select any five elements from the list
-3. Automate the selected elements using any JS based end to end testing framework.
- *Tip!* 
- Selenium (https://www.selenium.dev/documentation/)
- TestCafe (https://testcafe.io/documentation/402634/guides)
- Cypress (https://docs.cypress.io/)
-4. Create a project in github and provide us the link
-5. Make sure you have a readme with instructions inside the project on how to run it
+3. Automate the selected elements using Typescript version of Playwright end to end testing framework.
 
-Expectation: All the tests should pass
+  Playwright references:
+  - [Documentation](https://playwright.dev/docs)
+  - [Test API](https://playwright.dev/docs/api/class-test)
+4. Create a private project in github and provide us the link with access to it
+5. Make sure you have a Readme with instructions inside the project on how to run it
+
+Expectations:
+- All the tests should pass
+- Test scenarios should be independant from each other
+- Each test scenario should have meaningful assertions
+
+Bonus: run tests in different browsers.
 
 ## Notes
 
