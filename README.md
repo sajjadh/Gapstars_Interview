@@ -10,7 +10,9 @@ But does it live up to Harver's impeccable quality standards? Your mission is to
 
 ## Prequisites
 
-You'll need **Node.JS** + **NPM** installed to setup and run the server.
+You'll need **Node.JS** 12 or 14 + **NPM** installed to setup and run the server.
+
+:warning: Node version above 14 is not working with this server!
 
 ## Setup
 
@@ -41,7 +43,7 @@ at [`docs/api.html`](file:docs/api.html).
 3. Automate the selected elements using Typescript version of Playwright end to end testing framework.
 
   Playwright references:
-  - [Documentation](https://playwright.dev/docs)
+  - [Documentation](https://playwright.dev/docs/intro)
   - [Test API](https://playwright.dev/docs/api/class-test)
 4. Create a private project in github and provide us the link with access to it
 5. Make sure you have a Readme with instructions inside the project on how to run it
