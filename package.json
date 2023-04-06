@@ -4,22 +4,16 @@
   "description": "Exercise for QA Engineers",
   "main": "src/index.js",
   "scripts": {
-    "test": "cucumber-js",
     "start": "node server.js | bunyan",
-    "copy": "cp -r ./{api.yml,features,package.json,package-lock.json,README.md,.gitignore} build",
+    "copy": "cp -r ./{api.yml,package.json,package-lock.json,README.md,.gitignore} build",
     "doc": "redoc-cli bundle api.yml --options.nativeScrollbars --output build/docs/api.html",
     "minify": "terser server.js --output build/server.js --mangle",
     "clean": "rm -rf build && mkdir build",
     "zip": "zip -r harver-exercise-qa.zip build",
     "build": "npm run clean && npm run copy && npm run doc && npm run minify && npm run zip"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/philipmander/exercise-qa.git"
-  },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/philipmander/exercise-qa#readme",
   "dependencies": {
     "bunyan-sfdx-no-dtrace": "^1.8.2",
     "express": "^4.17.1",
