@@ -10,5 +10,7 @@ Pre-Requisites.
     Contains 2 section: API testing : Have added few API scripts using playwright framework
                         UI Automation : Contains 3 folders
                                           1. PageObjects - Contains the actions and verification steps corresposning to each page.
-                                          2. Spec - Contains test cases corresponding to each of the page
-                                          3. Common - This added to show how the code could be improved to promote code re-usability. This is just an example on how to do it, these code were not used in the actual test scripts, however it also be used.
+                                          2. 
+                                          3. Spec - Contains test cases corresponding to each of the page
+                                          4. 
+                                          5. Common - This added to show how the code could be improved to promote code re-usability. This is just an example on how to do it, these code were not used in the actual test scripts, however it also be used.
