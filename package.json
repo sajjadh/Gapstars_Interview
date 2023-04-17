@@ -19,14 +19,17 @@
   "license": "ISC",
   "dependencies": {
     "bunyan-sfdx-no-dtrace": "1.8.2",
-    "express": "4.17.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "express-openapi-validator": "2.12.2",
-    "passport": "0.4.0",
+    "passport": "^0.6.0",
     "passport-http": "0.3.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.32.3",
+    "allure-playwright": "^2.1.0",
     "javascript-obfuscator": "^4.0.2",
-    "redoc-cli": "0.13.0",
+    "redoc-cli": "^0.13.21",
     "terser": "4.3.9"
   }
 }
