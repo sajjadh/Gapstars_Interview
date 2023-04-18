@@ -6,7 +6,7 @@ Pre-Requisites.
 2. Run the following command.
     `npm install`
 3. The above code should ideally install all the dependencies to run the test.
-4. Code Structure
-    Contains 2 section: API testing : Have added few API scripts using playwright framework
-                        UI Automation : Contains 3 folders ( PageObjects, Spec, Common )
+4. Code Structure contains 2 section: 
+    A. API testing : Have added few API scripts using playwright framework
+    B. UI Automation : Contains 3 folders ( PageObjects, Spec, Common )
                                         
