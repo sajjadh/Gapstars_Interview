@@ -1,4 +1,4 @@
-##The following repo contains the server (which was given as part of the question, as well as the answer, i have also added some API testing scripts). The document related to API bugs and the Tested Postman script collection was sent to the email. 
+##The following repo contains the server which was given as part of the question, as well as the answer, (i have also added some API testing scripts). The document related to API bugs and the Tested Postman script collection was sent with the email. 
 
 Pre-Requisites. 
 1. There will be certain node version conflicts when working with the given server and the Playwright framework (Require version =>14.) node version. I recommend using NVM or first installing the Server artifacts, removing the node package, and then installing the playwright-recommended version (version => 14). 
