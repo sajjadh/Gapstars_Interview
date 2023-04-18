@@ -28,6 +28,10 @@ NOTE:
  Used POM, Parameterization, .env file, and other techniques. 
  
  Currently, the's a bug in the disappearing elements page, hence the test case is expected to fail unless the issue is fixed. 
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/31664351/232641935-d7435dbb-cae8-4786-8dcc-40f5f70e06df.png)
+
 
 
                                         
