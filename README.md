@@ -1,64 +1,37 @@
-Harver QA Exercise
-========================
+##The following repo contains the server which was given as part of the question, as well as the answer, (i have also added some API testing scripts). The document related to API bugs and the Tested Postman script collection was sent with the email. 
 
-This exercise assesses API testing and WEB test automation skills.
+Pre-Requisites. 
+1. There will be certain node version conflicts when working with the given server and the Playwright framework (Require version =>14.) node version. I recommend using NVM or first installing the Server artifacts, removing the node package, and then installing the playwright-recommended version (version => 14). 
 
-## Background
+2. Run the following command.
+    `npm install`
+3. The above code should ideally install all the dependencies to run the test. If any error occurs run `npx playwright install`
+4. To run all the test cases at once `npx playwright test`
+5. To run specific file `npx playwright test tests/UIAutomation/spec/abtest.spec.js`
+6. To view the reporter after execution `npx playwright show-report`
+7. To run the test cases in headless mode, remove the `headless` command in playwright.config file in the respective browser config. 
 
-Harver's new Candidate API has been developed and is almost ready to be released!
-But does it live up to Harver's impeccable quality standards? Your mission is to find out...
 
-## Prequisites
+NOTE:
+ Code Structure contains 2 sections: 
 
-You'll need **Node.JS** 12 or 14 + **NPM** installed to setup and run the server.
+    A. API testing: Have added a few API scripts using the playwright framework
 
-:warning: Node version above 14 is not working with this server!
+    B. UI Automation: Contains 3 folders ( PageObjects, Spec, Common )
+    
+ HTML/ Allure/ dot/ line reporter.
+ 
+ Configured cross-browser testing with Chromium, firefox, and Chrome. To enable other available browsers, please uncomment the required browser in Playwright.config file
+ 
+ Parallel execution and the number of workers are set to default values. 
+ 
+ Used POM, Parameterization, .env file, and other techniques. 
+ 
+ Currently, the's a bug in the disappearing elements page, hence the test case is expected to fail unless the issue is fixed. 
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/31664351/232641935-d7435dbb-cae8-4786-8dcc-40f5f70e06df.png)
 
-## Setup
 
-First time run the following command:
 
-`npm ci`
-
-To start the server:
-
-`npm start`
-
-You can now access the API at: [http://localhost:3000](http://localhost:3000)
-
-The API specification (how it should work) is detailed in `api.yml`. You can also view the auto-generated documentation
-at [`docs/api.html`](file:docs/api.html).
-
-## Tasks
-
-### API test assignment
-
-1. Timebox yourself to 1 hour to find as many defects in the API as you can. 
-2. Please share the defects you find in a document or spreadsheet.
-
-### Web UI Automation test assignment
-
-1. Go to https://the-internet.herokuapp.com/
-2. Select any five elements from the list
-3. Automate the selected elements using Typescript version of Playwright end to end testing framework.
-
-  Playwright references:
-  - [Documentation](https://playwright.dev/docs/intro)
-  - [Test API](https://playwright.dev/docs/api/class-test)
-4. Create a private project in github and provide us the link with access to it
-5. Make sure you have a Readme with instructions inside the project on how to run it
-
-Expectations:
-- All the tests should pass
-- Test scenarios should be independant from each other
-- Each test scenario should have meaningful assertions
-
-Bonus: run tests in different browsers.
-
-## Notes
-
-* The database is mocked in memory. Restart the server to reset the data.
-* Some of the API endpoints require [Basic Authentication](https://swagger.io/docs/specification/authentication/basic-authentication/).
-  The username is: `tester` and the password is: `iloveqa`.
-* We would normally encourage static code analysis to help look for bugs, but for the purpose of this
-  exercise, the `server.js` is deliberately obfuscated.
+                                        
