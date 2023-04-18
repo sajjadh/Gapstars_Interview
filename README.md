@@ -13,6 +13,7 @@ Pre-Requisites.
 
 
 NOTE:
+
  Code Structure contains 2 sections: 
 
     A. API testing: Have added a few API scripts using the playwright framework
@@ -27,7 +28,9 @@ NOTE:
  
  Used POM, Parameterization, .env file, and other techniques. 
  
- Currently, the's a bug in the disappearing elements page, hence the test case is expected to fail unless the issue is fixed. 
+ Currently, the's a bug in the disappearing elements page, hence the test case is expected to fail unless the issue is fixed.
+ 
+ The file common.js is used as an example to improve/best practices. 
  
  
  ![image](https://user-images.githubusercontent.com/31664351/232641935-d7435dbb-cae8-4786-8dcc-40f5f70e06df.png)
