@@ -8,10 +8,10 @@ test.beforeEach(async ({ page }) => {
   await page.goto('https://the-internet.herokuapp.com');
 });
 
-test.describe('Verify navigating to ', () => {
+test.describe('Verify disapearing element ', () => {
 
   //note - the following feature has a bug: where at certain time the appearing.elements do not appear/disappear.
-  test.only('Verify navigating to add/remove element page', async ({ page }) => {
+  test.only('Verify navigating to disapearing element page and validating the action', async ({ page }) => {
     // create a new todo locator
     const homepage = new homePage(page);
     const disapearingelementpage = new disappearingElements(page);

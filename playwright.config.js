@@ -57,10 +57,10 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Chrome'], headless:false },
     },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'],headless:false },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'],headless:false },
+    },
 
     // {
     //   name: 'webkit',
@@ -82,10 +82,10 @@ module.exports = defineConfig({
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ..devices['Desktop Chrome'], channel: 'chrome' },
-    // },
+    {
+      name: 'Google Chrome',
+      use: { ...devices['Desktop Chrome'], channel: 'chrome', headless:false },
+    },
   ],
 
   /* Run your local dev server before starting the tests */

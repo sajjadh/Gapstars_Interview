@@ -8,8 +8,8 @@ test.beforeEach(async ({ page }) => {
   await page.goto('https://the-internet.herokuapp.com');
 });
 
-test.describe('Verify navigating to ', () => {
-  test.only('Verify navigating to add/remove element page', async ({ page }) => {
+test.describe('Verify add/remove elements page', () => {
+  test.only('Verify navigating to add/remove element page & add/remove element actions', async ({ page }) => {
     // create a new todo locator
     const homepage = new homePage(page);
     const addremoveelementpage = new addremoveElementPage(page);

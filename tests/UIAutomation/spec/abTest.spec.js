@@ -11,7 +11,7 @@ test.afterAll(async ({page}) => {
   // await browser.close();
 });
 
-test.describe('Verify navigating to ', () => {
+test.describe('Verify ab testing page ', () => {
   test.only('Verify navigating to AB testing page', async ({ page }) => {
     const homepage = new homePage(page);
     const abtestingpage = new abTestingPage(page);

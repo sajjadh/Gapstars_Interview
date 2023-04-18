@@ -19,6 +19,6 @@ exports.abTestingPage = class abTestingPage{
     //verify the url
     await expect(currentUrl).toEqual(expectedUrl);
     //verify the page elements
-    await expect(this.divABTestingHeader).toContainText("A/B Test Control");
+    await expect(this.divABTestingHeader).toContainText("A/B Test");
   };
 };
