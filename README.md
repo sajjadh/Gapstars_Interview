@@ -9,6 +9,7 @@ Pre-Requisites.
 4. To run all the test cases at once `npx playwright test`
 5. To run specific file `npx playwright test tests/UIAutomation/spec/abtest.spec.js`
 6. To view the reporter after execution `npx playwright show-report`
+7. To run the test cases in headless mode, remove the `headless` command in playwright.config file in the respective browser config. 
 
 
 NOTE:
